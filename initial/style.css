@@ -11,6 +11,7 @@ a,
 button {
     transition: all .3s ease-in-out;
     outline: none!important;
+    font-size: 2.5rem;
 }
 
 a:hover {
@@ -460,10 +461,6 @@ nav .caret {
     background: rgba(0, 0, 0, .3);
 }
 
-button {
-    outline: none!important;
-}
-
 .btn-rd {
     border-radius: 40px;
 }
@@ -520,7 +517,10 @@ button {
     z-index: 500;
     transition: all .3s ease-in-out;
 }
-
+p.lightbox-caption {
+    font-size: 1.2rem;
+    text-align: center;
+}
 .scrollToTop span {
     margin-top: 6px;
 }
@@ -539,7 +539,7 @@ a[data-lightbox] {
 a[data-lightbox]:hover::before {
     content: "+";
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
-    font-size: 32px;
+    font-size: 30px;
     width: 50px;
     height: 50px;
     margin-left: -25px;
@@ -673,16 +673,16 @@ a {
     text-align: center;
     font-weight: lighter;
     max-width: 520px;
-    margin: auto auto auto auto;
+    margin: auto;
 }
 
 p {
-    font-size: 11px;
+    font-size: 1em;
 }
 
 .tight-width-whitespace {
     max-width: 600px;
-    margin: auto auto auto auto;
+    margin: auto;
 }
 
 .h1 {
@@ -694,40 +694,45 @@ p {
     margin-top: 22px;
     color: #FFFFFF!important;
     text-transform: uppercase;
-    padding: 12px 28px 12px 28px;
+    padding: 12px 28px;
     font-size: 16px;
     font-weight: 700;
 }
-
 .social {
     max-width: 400px;
-    margin: auto auto auto auto;
+    margin: 2rem auto;
 }
-
+header.row {
+    margin: auto;
+}
 h2 {
-    font-size: 22px;
-    line-height: 1.4em;
+    font-size: 2rem;
+    line-height: 2rem;
 }
-
 h3 {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
     color: #333333!important;
 }
-
 .med-width-whitespace {
     max-width: 800px;
-    margin: auto auto auto auto;
+    margin: auto;
     box-shadow: 0px 0px 0px #000000;
 }
-
+.row {
+    margin: auto;
+}
 h1 {
     color: #333333!important;
 }
 
 h4 {
     color: #333333!important;
+
+}
+footer.row {
+    margin: auto;
 }
 
 .icons {
@@ -740,7 +745,8 @@ h4 {
 }
 
 .portfolio-thumb {
-    margin-bottom: 24px;
+    margin-bottom: 20px auto;
+    width: 100%;
 }
 
 .portfolio-row {
@@ -754,7 +760,7 @@ h4 {
 
 .black-background {
     background-color: rgba(165, 147, 99, 0.7);
-    padding: 40px 40px 40px 40px;
+    padding: 40px;
 }
 
 .bold-link {
@@ -775,11 +781,11 @@ h4 {
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #fff!important;
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background: #d24607;
     color: #FFFFFF!important;
 }
 
@@ -872,10 +878,7 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
+    
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -884,9 +887,6 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
 }
 
 @media (max-width: 767px) {
@@ -1038,5 +1038,11 @@ h4 {
 @media (max-width: 767px) {
     .bloc-mob-center-text {
         text-align: center;
+    }
+}
+@media (max-width: 730px) {
+    .row {
+        max-width: 100%;
+    }
     }
 }
